@@ -2,10 +2,7 @@
 
 const path = require('path');
 const fs = require('fs');
-const builtin = require('builtin-modules').reduce((map, key) => {
-  map[key] = true;
-  return map;
-}, {});
+const builtin = new Set(require('builtin-modules'));
 
 module.exports = {
   meta: {
@@ -48,7 +45,7 @@ module.exports = {
           moduleName = name.split('/')[0];
         }
         // if module is a node core module then skip
-        if (builtin[moduleName]) {
+        if (builtin.has(moduleName)) {
           return;
         }
 
