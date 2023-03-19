@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-implicit-dependencies",
+  "name": "@benasher44/eslint-plugin-implicit-dependencies",
   "version": "1.1.2",
   "description": "eslint plugin to detect implicit dependencies",
   "main": "index.js",
@@ -22,5 +22,6 @@
   "homepage": "https://github.com/lennym/eslint-plugin-implicit-dependencies#readme",
   "dependencies": {
     "builtin-modules": "^3.3.0"
-  }
+  },
+  "devDependencies": {}
 }
